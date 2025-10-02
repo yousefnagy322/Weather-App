@@ -25,7 +25,6 @@ class HomeScreen extends StatelessWidget {
           }
           if (state is WeatherSuccessState) {
             WeatherModel model = state.weatherModel;
-
             return Scaffold(
               backgroundColor: Colors.blue[300],
               body: Container(

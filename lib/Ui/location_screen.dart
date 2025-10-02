@@ -408,10 +408,9 @@ class LocationScreen extends StatelessWidget {
                                         await SharedPreferences.getInstance();
                                     await prefs.setString(
                                       'Selectedcity',
-                                      slectedCity!,
+                                      '{$slectedCity}',
                                     );
-
-                                    Navigator.push(
+                                    Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) => HomeScreen(),

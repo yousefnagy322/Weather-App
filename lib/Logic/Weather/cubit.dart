@@ -17,6 +17,7 @@ class WeatherCubit extends Cubit<WeatherState> {
     emit(WeatherLoadingState());
 
     final city = await getSelectedcity();
+    print(city);
     try {
       final Response response = await dio.get(
         'https://api.weatherapi.com/v1/forecast.json?key=149eeec92f3c420b98a114422241011&q=${city}&days=5&aqi=no&alerts=no',
